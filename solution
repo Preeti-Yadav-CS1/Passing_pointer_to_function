@@ -1,0 +1,25 @@
+//swaping using pointers
+#include <iostream>
+
+using namespace std;
+void swap(int *a, int *b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+}
+int main()
+{
+    int a=10;
+    int b=20;
+    
+    //method 1
+    int *aptr=&a;
+    int *bptr=&b;
+    swap(aptr,bptr);
+    cout<<a<<" "<<b<<endl;
+    
+    //method 2
+    swap(&a,&b);
+    cout<<a<<" "<<b<<endl;
+    return 0;
+}
